@@ -7,6 +7,7 @@ import java.util.Stack;
 import nikhil.tripathy.util.Printer;
 
 /*This is learnt as part of stack learning, new way of stack application*
+ * foundation class for understanding more complex problems.
  */
 
 public class NextGreaterElement {
@@ -22,6 +23,7 @@ public class NextGreaterElement {
 	public static ArrayList<Integer> nextGreater(int arr[]) {
 		ArrayList<Integer> res = new ArrayList<Integer>();
 		Stack<Integer> st = new Stack<Integer>();
+		
 		//for (int i=0;i<arr.length;i++) { This is the change for next greatest element on the left
 		for (int i=arr.length-1;i>=0;i--) {
 			if (st.size() == 0)
@@ -39,6 +41,7 @@ public class NextGreaterElement {
 			}
 			st.push(arr[i]);
 		}
+		//Reverse the list before returning in case of checking right sub array
 		return res;
 	}
 }
